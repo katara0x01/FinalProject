@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [userName, setUsername] = useState("");
 
   const navigate = useNavigate();
   const handleSignUp = (e) => {
@@ -16,7 +16,7 @@ function Signup() {
     const userData = {
       email,
       password,
-      username,
+      userName,
     };
 
     axios
@@ -43,7 +43,7 @@ function Signup() {
         onChange={(e) => setUsername(e.target.value)}
         type="email"
         placeholder="Username"
-        value={username}
+        value={userName}
       />
       <input
         onChange={(e) => setPassword(e.target.value)}

@@ -28,6 +28,7 @@ function App() {
               <Route path="/messages" element={<Messages />} />
               <Route path="/home" element={<Homepage />} />
               <Route path="/" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
             </Routes>
           </Grid>
         </Grid>
