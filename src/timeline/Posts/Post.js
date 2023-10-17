@@ -6,33 +6,40 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import Stories from '../../Component/Stories'
+function Post({ user, postImage, likes, timestamp }) {
 
-function Post({user,postImage,likes,timestamp}) {
   return (
+    <>
+    {/* <Stories style={{marginLeft: "10px"}} /> */}
     <div className="post">
       <div className="post__header">
         <div className="post__headerAuthor">
-          {/* <Avatar>N</Avatar> */}
+          <Avatar style={{ marginRight: "10px" }}>
+            {user.charAt(0).toUpperCase()}
+          </Avatar>{" "}
           {user} • <span>{timestamp}</span>
         </div>
-        {/* <MoreHorizIcon /> */}
+        <MoreHorizIcon />
       </div>
-      <div className="post__image"></div>
-      <img src={postImage} alt="Post Image" />
-      <div className="post__footer"></div>
-      <div className="post__footericons">
-        <div className="post__iconMain">
-{/* <FavoriteBorderIcon className="postIcon" /> */}
-{/* <ChatBubbleOutlineIcon className="postIcon" /> */}
-{/* <TelegramIcon className="postIcon" /> */}
-        </div>
-
-        <div className="post__iconSave">
-        {/* <BookmarkBorderIcon className="postIcon" /> */}
-        </div>
+      <div className="post__image">
+        <img src={postImage} alt="Post Image" />
       </div>
-      Liked by {likes} people.
+      <div className="post__footer">
+        <div className="post__footerIcons">
+          <div className="post__iconsMain">
+            <FavoriteBorderIcon className="postIcon" />
+            <ChatBubbleOutlineIcon className="postIcon" />
+            <TelegramIcon className="postIcon" />
+          </div>
+          <div className="post__iconSave">
+            <BookmarkBorderIcon className="postIcon" />
+          </div>
+        </div>
+        Liked by {likes} people.
+      </div>
     </div>
+    </>
   );
 }
 

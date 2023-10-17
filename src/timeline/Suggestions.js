@@ -1,7 +1,11 @@
 import { Avatar } from "@mui/material";
 import React from "react";
 import "./Suggestions.css";
-
+import b from '../assets/Avatars/steward.png'
+import n from '../assets/Avatars/singer.png'
+import m from '../assets/Avatars/man.png'
+import k from '../assets/Avatars/singer.png'
+import l from '../assets/Avatars/nurse.png'
 function Suggestions() {
   return (
     <div className="suggestions">
@@ -10,7 +14,7 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              {/* <Avatar>N</Avatar> */}
+              <Avatar src={l}/>
             </span>
             <div className="username__info">
               <span className="username">nadahaj</span>
@@ -23,7 +27,7 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              {/* <Avatar>I</Avatar> */}
+              <Avatar src={b}/>
             </span>
             <div className="username__info">
               <span className="username">iibraheems</span>
@@ -36,7 +40,7 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              {/* <Avatar>M</Avatar> */}
+              <Avatar src={m}/>
             </span>
             <div className="username__info">
               <span className="username">mman9our</span>
@@ -49,7 +53,7 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              {/* <Avatar>k</Avatar> */}
+              <Avatar src={k}/>
             </span>
             <div className="username__info">
               <span className="username">katara0x01</span>

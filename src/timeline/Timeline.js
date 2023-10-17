@@ -1,54 +1,62 @@
 import React, { useState } from "react";
-import "./Timeline.css";
-import Suggestions from "./Suggestions";
 import Post from "./Posts/Post";
-
+import Suggestions from "./Suggestions";
+import "./Timeline.css";
+import Stories from '../Component/Stories'
 function Timeline() {
   const [posts, setPosts] = useState([
     {
       user: "narjis.ps",
-      postImage: "https://i.pinimg.com/564x/3a/3c/05/3a3c05e0717ac41e1f27038ff1f244de.jpg",
-      likes: 12,
-      timespamp: "2d",
+      postImage:
+        "https://i.pinimg.com/750x/be/d5/74/bed57435c426f16991d104551098150c.jpg",
+      likes: 54,
+      timestamp: "1d",
     },
     {
-      user: "nadahaj",
-      postImage: "https://i.pinimg.com/564x/ef/be/43/efbe43c70a47043e7c8d5db9801f4f7c.jpg",
-      likes: 12,
-      timespamp: "2d",
+      user: "haninn",
+      postImage:
+        "https://i.pinimg.com/564x/44/e3/9a/44e39a16379caa64781e54e283830f04.jpg",
+      likes: 43,
+      timestamp: "1h",
     },
-
     {
-      user: "n",
-      postImage: "",
-      likes: 12,
-      timespamp: "3d",
+      user: "katara0x01",
+      postImage:
+        "https://i.pinimg.com/564x/ab/af/ed/abafede02e4ff205f6ee01b574ec3e09.jpg",
+      likes: 140,
+      timestamp: "11h",
     },
-
     {
-      user: "narjis",
-      postImage: "",
-      likes: 12,
-      timespamp: "2d",
+      user: "nemo40",
+      postImage:
+        "https://i.pinimg.com/564x/52/92/99/529299f567af8aec2734ff298a8aebe0.jpg",
+      likes: 14,
+      timestamp: "2d",
     },
   ]);
+
   return (
+    <>
+    <Stories style={{marginLeft: "10px"}} />
+
     <div className="timeline">
       <div className="timeline__left">
         <div className="timeline__posts">
-          {posts.map(post=>(
-            <post user={post.user} postImage={post.postImage} likes={post.likes} timespamp={post.timespamp}/>
+          {posts.map((post) => (
+            <Post
+              user={post.user}
+              postImage={post.postImage}
+              likes={post.likes}
+              timestamp={post.timestamp}
+            />
           ))}
-          {/* <Post />
-          <Post />
-          <Post /> */}
         </div>
       </div>
-
       <div className="timeline__right">
         <Suggestions />
       </div>
     </div>
+    </>
   );
 }
 
