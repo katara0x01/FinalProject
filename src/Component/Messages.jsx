@@ -4,7 +4,6 @@
 // import Button from '@mui/material/Button';
 // import Grid from '@mui/material/Grid';
 
-
 // export default function Messages() {
 //     return (
 //       <div style={{backgroundColor:"black"}}>
@@ -28,45 +27,40 @@
 //   </div>
 //     )}
 
-
-
-
-
-
-import Avatar from '@mui/material/Avatar';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
-import React from 'react'
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import EditNoteIcon from '@mui/icons-material/EditNote';
-import Button from '@mui/material/Button';
-import m from '../assets/messengar-logo.png'
-import l from '../assets/Avatars/nurse.png'
+import Avatar from "@mui/material/Avatar";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Divider from "@mui/material/Divider";
+import List from "@mui/material/List";
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import ListItem from "@mui/material/ListItem";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import EditNoteIcon from "@mui/icons-material/EditNote";
+import Button from "@mui/material/Button";
+import m from "../assets/messengar-logo.png";
+import l from "../assets/Avatars/nurse.png";
 
 function Messages() {
   return (
-    <Box >
-      <Grid container spacing={1} xs >
+    <Box>
+      <Grid container spacing={1} xs>
         <Grid item xs={3} style={{ backgroundColor: "black" }}>
           <Grid container alignItems="center">
             <Grid item xs>
               <Typography gutterBottom variant="h4" component="div">
-                <ListItem >
-                  <Typography style={{ color: "white", textAlign: "left" }}>Narjis Ibrahem <KeyboardArrowDownIcon />
+                <ListItem>
+                  <Typography style={{ color: "white", textAlign: "left" }}>
+                    Narjis Ibrahem <KeyboardArrowDownIcon />
                   </Typography>
                 </ListItem>
               </Typography>
             </Grid>
             <Grid item>
-
-              <Typography style={{ color: "white", textAlign: "right" }}><EditNoteIcon />
-
+              <Typography style={{ color: "white", textAlign: "right" }}>
+                <EditNoteIcon />
               </Typography>
             </Grid>
           </Grid>
@@ -74,32 +68,37 @@ function Messages() {
           <Grid container alignItems="center">
             <Grid item xs>
               <Typography gutterBottom component="div">
-                <ListItem >
-                  <Typography style={{ color: "white", textAlign: "left" }}>masseges
+                <ListItem>
+                  <Typography style={{ color: "white", textAlign: "left" }}>
+                    masseges
                   </Typography>
                 </ListItem>
               </Typography>
             </Grid>
             <Grid item>
-
-              <Typography style={{ color: "white", textAlign: "right" }}>Request
-
+              <Typography style={{ color: "white", textAlign: "right" }}>
+                Request
               </Typography>
             </Grid>
           </Grid>
-          <List sx={{ width: '100%', maxWidth: 700, bgcolor: 'black', color: "white" }}>
+          <List
+            sx={{
+              width: "100%",
+              maxWidth: 700,
+              bgcolor: "black",
+              color: "white",
+            }}
+          >
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
                 <Avatar alt="Remy Sharp" src={l} />
               </ListItemAvatar>
               <ListItemText
                 primary="Hanin"
-
                 secondary="followed by Nour"
                 sm={{ color: "white" }}
               />
               .1s
-
             </ListItem>
 
             <Divider variant="inset" component="li" />
@@ -107,10 +106,7 @@ function Messages() {
               <ListItemAvatar>
                 <Avatar alt="Travis Howard" src={l} />
               </ListItemAvatar>
-              <ListItemText
-                primary="Nour"
-                secondary="N"
-              />
+              <ListItemText primary="Nour" secondary="N" />
               .11s
             </ListItem>
             <Divider variant="inset" component="li" />
@@ -118,48 +114,45 @@ function Messages() {
               <ListItemAvatar>
                 <Avatar alt="Cindy Baker" src={l} />
               </ListItemAvatar>
-              <ListItemText
-                primary="Dalia"
-                secondary="D" />
+              <ListItemText primary="Dalia" secondary="D" />
               .1d
-
-
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
                 <Avatar alt="Travis Howard" src={l} />
               </ListItemAvatar>
-              <ListItemText
-                primary="Nour"
-                secondary="N"
-              />
+              <ListItemText primary="Nour" secondary="N" />
               .11s
             </ListItem>
           </List>
-
-
-
         </Grid>
 
-
-
-        <Grid item xs={7} style={{ backgroundColor: "black", padding: "150px", width: "1500px" }}>
+        <Grid
+          item
+          xs={7}
+          style={{
+            backgroundColor: "black",
+            padding: "150px",
+            width: "1500px",
+          }}
+        >
           <br />
           <br />
-          <br /><br />
-          <img src={m} alt='hello' />
+          <br />
+          <br />
+          <img src={m} alt="hello" />
           <Typography style={{ color: "white" }}>Your Masseges</Typography>
           <br />
-          <Typography style={{ color: "#1D1D1D" }}>Send private photo and massege to a freiend or group</Typography>
+          <Typography style={{ color: "#1D1D1D" }}>
+            Send private photo and massege to a freiend or group
+          </Typography>
           <br />
           <Button variant="contained">Contained</Button>
-
         </Grid>
       </Grid>
-
     </Box>
   );
 }
 
-export default Messages
+export default Messages;

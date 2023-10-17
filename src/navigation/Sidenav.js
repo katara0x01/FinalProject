@@ -10,7 +10,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { Avatar } from "@mui/material";
-import N from '../Pics/N.jpg'
+import N from "../Pics/N.jpg";
 function Sidenav() {
   return (
     <div className="sidenav">
@@ -21,7 +21,6 @@ function Sidenav() {
       />
       <div className="sidenav__buttons">
         <Link to="/posts">
-         
           <button className="sidenav__button">
             <HomeIcon />
             <span>Home</span>
@@ -64,7 +63,7 @@ function Sidenav() {
         </Link>
         <Link to="/profile">
           <button className="sidenav__button">
-            <Avatar src={N}/>
+            <Avatar src={N} />
             <span>Narjis Ibrahim</span>
           </button>
         </Link>

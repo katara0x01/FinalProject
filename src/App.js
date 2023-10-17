@@ -11,13 +11,14 @@ import CreateModal from "./Component/CreateModal";
 import Signup from "./Component/Signup";
 // import Login from "./Component/Login";
 import axios from "axios";
+import Login from "./Component/Login";
+import Homepage from "./Homepage";
 function App() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
-          </Grid>
+          <Grid item xs={4}></Grid>
           <Grid item xs={8}>
             <Routes>
               <Route path="/profile" element={<Profile />} />
@@ -25,7 +26,8 @@ function App() {
               <Route path="/explore" element={<Explore />} />
               <Route path="/modal" element={<CreateModal />} />
               <Route path="/messages" element={<Messages />} />
-              {/* <Route path="/" element={<Login/>} /> */}
+              <Route path="/home" element={<Homepage />} />
+              <Route path="/" element={<Login />} />
             </Routes>
           </Grid>
         </Grid>
